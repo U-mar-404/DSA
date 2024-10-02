@@ -12,7 +12,7 @@ public:
         data = val;
         next = NULL;
     }
-//task one is about adding a node at the end or tail so the code is
+//task one is about adding a node at the end or tail so the code is:
     void InsertAtTail(node *&head, int val)
     {
         node *n = new node(val);
