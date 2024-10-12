@@ -34,13 +34,21 @@ string DecryptStg(string Nstg)
 int main()
 {
     cout << "Enter a string: ";
-    string stg,encryptedstring,decryptedstring;
+    string stg,encryptedstring,decryptedstring,e2n;
     getline(cin,stg);
     int choice;
     bool cond=1;
     while(cond) {
-    cout<<endl<<"Press 1 to Print the entered string."<<endl<<"Press 2 to Encrypt the Entered string;"<<endl<<"Press 3 to save the Encrypted string."<<endl<<"Press 4 to print the saved encrypted string"<<endl<<"Press 5 to Decrypt the saved encrypted string."<<"Press 6 to save the Decrypted string."<<endl<<"Press 7 to Print the Decrypted String"<<endl<<"Press 0 exit"<<endl<<"Enter your choice: ";
+    cout<<endl<<endl<<endl;
+    cout<<endl<<"Press 1 to Print the entered string.";
+    cout<<endl<<"Press 2 to Encrypt the Entered string;";
+    cout<<endl<<"Press 3 to print the saved encrypted string";
+    cout<<endl<<"Press 4 to Decrypt the saved encrypted string.";
+    cout<<endl<<"Press 5 to Print the Decrypted String";
+    cout<<endl<<"Press 0 exit";
+    cout<<endl<<"Enter your choice: ";
     cin>>choice;
+    cout<<endl<<endl<<endl;
     switch (choice)
     {
     case 1:
@@ -54,27 +62,28 @@ int main()
         break;
 
     case 3:
-        cout<<"Encryption Saved!"<<endl<<endl<<endl;
-        break;
-
-    case 4:
         cout<<encryptedstring;
         cout<<endl<<endl<<endl;
         break;
 
-    case 5:
+    case 4:
         decryptedstring=ReverseString(encryptedstring);
         decryptedstring=DecryptStg(encryptedstring);
         cout<<"Decryption Done!"<<endl<<endl<<endl;
         break;
 
-    case 6:
-        cout<<"Decryption Saved!"<<endl<<endl<<endl;
-        break;
-
-    case 7:
+    case 5:
         cout<<decryptedstring;
         cout<<endl<<endl<<endl;
+        break;
+
+    case 6:
+        cout<<"Encrypted to normal"<<endl<<"Enter Encrypted form: ";
+        getline(cin, e2n);
+        e2n=ReverseString(e2n);
+        e2n=DecryptStg(e2n);
+        cout<<e2n;
+
         break;
 
     case 0:
