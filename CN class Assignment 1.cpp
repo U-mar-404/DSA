@@ -57,7 +57,6 @@ int main()
 
     case 2:
         encryptedstring=EncryptStg(stg);
-        encryptedstring=ReverseString(encryptedstring);
         cout<<"Encryption Done!"<<endl<<endl<<endl;
         break;
 
@@ -67,7 +66,6 @@ int main()
         break;
 
     case 4:
-        decryptedstring=ReverseString(encryptedstring);
         decryptedstring=DecryptStg(encryptedstring);
         cout<<"Decryption Done!"<<endl<<endl<<endl;
         break;
@@ -75,15 +73,6 @@ int main()
     case 5:
         cout<<decryptedstring;
         cout<<endl<<endl<<endl;
-        break;
-
-    case 6:
-        cout<<"Encrypted to normal"<<endl<<"Enter Encrypted form: ";
-        getline(cin, e2n);
-        e2n=ReverseString(e2n);
-        e2n=DecryptStg(e2n);
-        cout<<e2n;
-
         break;
 
     case 0:
